@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+html { background: #f2f4f8; color: #172033; font-family: system-ui, sans-serif; }
+body { margin: 0; }
+h1 { font-size: clamp(42px, 6vw, 76px); line-height: 1.05; max-width: 850px; animation: fade-up 0.8s ease-out both; }
+h2 { font-size: 30px; }
+p { max-width: 600px; line-height: 1.6; }
+.hero { height: 760px; padding: 70px 24px; }
+#badge { display: inline-block; background: #c3d9fa; border-radius: 20px; padding: 8px 16px; }
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+button { font: inherit; padding: 12px 18px; border: 2px solid #304568; color: #172033; background: #fff; border-radius: 4px; transition: all 120ms ease-out; cursor: pointer; }
+button:focus-visible { outline: 3px solid #b14516; outline-offset: 4px; }
+#hover-colour:hover { background: #172033; color: white; }
+#hover-lift:hover { transform: translateY(-8px); }
+#hover-border:hover { border-color: #dc501c; }
+#hover-shadow:hover { box-shadow: 0 8px 0 #99b7d7; }
+#hover-round:hover { border-radius: 28px; }
+#pin-section { height: 420px; background: #c3d9fa; overflow: hidden; padding: 36px 24px; }
+#scrub-panel { width: 1100px; padding: 24px; background: #fff; border-radius: 16px; will-change: transform; }
+#parallax-section { padding: 180px 24px 140px; }
+.image-window { max-width: 1000px; height: 320px; overflow: hidden; }
+#parallax-image { display: block; width: 100%; height: 500px; object-fit: cover; will-change: transform; }
+.progress-section { min-height: 650px; padding: 80px 24px; background: #fff; }
+#progress-bar { width: 100%; height: 18px; background: #304568; transform-origin: left; animation: grow linear both; animation-timeline: view(); animation-range: entry 0% exit 100%; }
+footer { height: 500px; padding: 80px 24px; }
+@keyframes fade-up { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+/* Fixed size so the rotating text never shifts layout. */
+.rotator-box { width: 320px; height: 24px; overflow: hidden; white-space: nowrap; }
+/* Breakpoints for --widths auto: classic and Tailwind v4 range syntax. */
+@media (min-width: 768px) { .ambient-section { padding-inline: 48px; } }
+@media (width >= 64rem) { .ambient-section { padding-inline: 96px; } }
+@media (prefers-reduced-motion: reduce) { h1 { animation: none; } }
+
+.ambient-section { min-height: 500px; padding: 48px 24px; }
+.marquee-window { overflow: hidden; width: 100%; }
+#marquee { width: max-content; animation: marquee 2s linear infinite; }
+.tall-section { min-height: 1500px; padding: 80px 24px; }
+#consent { position: fixed; left: 16px; bottom: 16px; z-index: 50; max-width: 320px; padding: 16px; background: #fff; border: 1px solid #304568; }
+#consent[hidden] { display: none; }
+#glow-wrap { animation: glow 2s ease-in-out infinite; }
+@keyframes glow { 50% { opacity: 0.6; } }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-240px); } }
+/* Timed-change fixtures: stacked phrases moved by per-frame inline styles, and a CSS keyframe ticker. */
+#task-stack { position: relative; width: 320px; height: 24px; overflow: hidden; }
+#task-stack .task { position: absolute; inset: 0; margin: 0; white-space: nowrap; line-height: 24px; }
+.ticker-box { width: 320px; height: 24px; clip-path: inset(0); }
+#ticker { animation: ticker 3.6s infinite; }
+#ticker span { display: block; height: 24px; line-height: 24px; }
+@keyframes ticker { 0%, 28% { transform: translateY(0); } 33%, 61% { transform: translateY(-24px); } 66%, 94% { transform: translateY(-48px); } 100% { transform: translateY(0); } }

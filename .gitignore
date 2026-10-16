@@ -1,0 +1,13 @@
+node_modules/
+# Generated capture and rebuild output
+captures/*
+!captures/.gitkeep
+rebuilds/*
+!rebuilds/.gitkeep
+*.webm
+*.mp4
+.DS_Store
+
+# Private notes, site-specific briefs and history (never published)
+local/
+.test-*/

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Lab local motion fixture</title>
+  <link rel="stylesheet" href="/demo/style.css">
+  <script src="/node_modules/gsap/dist/gsap.min.js" defer></script>
+  <script src="/node_modules/gsap/dist/ScrollTrigger.min.js" defer></script>
+  <script src="/node_modules/lenis/dist/lenis.min.js" defer></script>
+  <script src="/demo/demo.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <span id="badge">Local fixture</span>
+      <h1 id="hero-title">Measure the motion.</h1>
+      <p>Original test content. All resources come from this local fixture server.</p>
+      <div class="buttons" aria-label="Hover examples">
+        <button id="hover-colour" type="button">Colour</button>
+        <button id="hover-lift" type="button">Lift</button>
+        <button id="hover-border" type="button">Border</button>
+        <button id="hover-shadow" type="button">Shadow</button>
+        <button id="hover-round" type="button">Round</button>
+        <a id="vanishing-link" href="#vanish">Vanishing link</a>
+      </div>
+    </section>
+    <section id="pin-section" aria-label="Pinned horizontal panel">
+      <div id="scrub-panel"><h2>A thousand pixels of pinning</h2><p>This panel moves left by 600 pixels.</p></div>
+    </section>
+    <section id="parallax-section" aria-labelledby="parallax-title">
+      <h2 id="parallax-title">Parallax passage</h2>
+      <div class="image-window"><img id="parallax-image" src="/demo/landscape.svg" width="1000" height="500" alt="Original geometric landscape for measuring parallax"></div>
+    </section>
+    <section class="progress-section" aria-labelledby="progress-title">
+      <h2 id="progress-title">Native scroll timeline</h2>
+      <div id="progress-bar" aria-hidden="true"></div>
+      <p>The bar grows as this section passes through the viewport.</p>
+    </section>
+    <section class="ambient-section" aria-label="Ambient media">
+      <video id="ambient-video" src="/video/loop" width="320" height="180" muted loop autoplay playsinline></video>
+      <div class="marquee-window"><div id="marquee"><span id="marquee-child">An infinite ambient marquee</span></div></div>
+      <p class="rotator-box"><span id="rotator">Posted $1,408 in payments</span></p>
+      <div id="task-stack"><p class="task">Task one</p><p class="task">Task two</p><p class="task">Task three</p><p class="task">Task four</p></div>
+      <div class="ticker-box"><div id="ticker"><span>Ticker one</span><span>Ticker two</span><span>Ticker three</span></div></div>
+      <div id="glow-wrap"><p id="inside-loop">Scroll-driven text inside a looping glow</p></div>
+      <img id="extensionless-image" src="/img/hero" width="120" height="80" alt="WebP without a URL extension">
+      <img id="mislabelled-image" src="/img/wrong" width="120" height="80" alt="AVIF with a generic MIME header">
+    </section>
+    <section class="tall-section"><h2>Long page observation one</h2></section>
+    <section class="tall-section"><h2>Long page observation two</h2></section>
+    <section class="tall-section"><h2>Long page observation three</h2></section>
+    <footer>End of local fixture.</footer>
+    <div id="consent" role="dialog" aria-label="Cookie preferences" hidden>
+      <p>We use cookies to understand how this page is used.</p>
+      <button id="consent-accept" type="button">Accept all</button>
+      <button id="consent-reject" type="button">Reject non-essential</button>
+    </div>
+  </main>
+</body>
+</html>
